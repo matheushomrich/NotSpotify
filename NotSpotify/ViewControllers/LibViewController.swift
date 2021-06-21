@@ -10,10 +10,6 @@ import UIKit
 class LibViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var lib: UITableView!
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return collections.count
-    }
-    
     
     private var collections: [MusicCollection] = []
     private var musicService: MusicService?
@@ -31,18 +27,18 @@ class LibViewController: UIViewController, UITableViewDataSource, UITableViewDel
         lib.dataSource = self
     }
     
-    func numberOfSections(in libView: UITableView) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return collections.count
     }
     
-    func tableView(_ libView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = libView.dequeueReusableCell(withIdentifier: "title-detail", for: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "title-detail", for: indexPath) as? LibTableViewCell
+        else { fatalError("Could not convert from cell to LibTableViewCell") }
         
         let musicCollection = collections[indexPath.row]
-        
-        cell.imageView?.image = UIImage(named: musicCollection.id)
-        cell.textLabel?.text = musicCollection.title
-        cell.detailTextLabel?.text = musicCollection.type.rawValue + " · " + musicCollection.mainPerson
+        cell.albumImageView.image = UIImage(named: musicCollection.id)
+        cell.titleLabel.text = musicCollection.title
+        cell.subtitleLabel.text = "\(musicCollection.type.rawValue) · \(musicCollection.mainPerson)"
         
         return cell
     }
