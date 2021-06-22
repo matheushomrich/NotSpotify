@@ -20,6 +20,10 @@
 		4E4F381B267D06020037C9FA /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F381A267D06020037C9FA /* MusicService.swift */; };
 		4E4F381D267D07030037C9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4F381C267D07030037C9FA /* Main.storyboard */; };
 		4E4F3828267D35000037C9FA /* LibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F3827267D35000037C9FA /* LibViewController.swift */; };
+		F4B299BD268109640085A170 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F4B299BC268109640085A170 /* data.json */; };
+		F4B299C02681096E0085A170 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B299BF2681096E0085A170 /* MusicService.swift */; };
+		F4B299C4268121050085A170 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B299C3268121050085A170 /* FavoritesTableViewCell.swift */; };
+		F4B299CC268124C20085A170 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B299CB268124C20085A170 /* FavoriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		4E4F381A267D06020037C9FA /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicService.swift; path = ../MusicService.swift; sourceTree = "<group>"; };
 		4E4F381C267D07030037C9FA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4E4F3827267D35000037C9FA /* LibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibViewController.swift; sourceTree = "<group>"; };
+		F4B299BC268109640085A170 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = NotSpotify/data.json; sourceTree = SOURCE_ROOT; };
+		F4B299BF2681096E0085A170 /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicService.swift; path = NotSpotify/MusicService.swift; sourceTree = SOURCE_ROOT; };
+		F4B299C3268121050085A170 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		F4B299CB268124C20085A170 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +104,10 @@
 		4E4F3825267D28C80037C9FA /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				4E4F3818267D05F70037C9FA /* data.json */,
 				4E4F381A267D06020037C9FA /* MusicService.swift */,
+				4E4F3818267D05F70037C9FA /* data.json */,
+				F4B299BF2681096E0085A170 /* MusicService.swift */,
+				F4B299BC268109640085A170 /* data.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -106,8 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				4E321BE4268102EC00A24EAB /* LibTableViewCell.swift */,
+				F4B299C3268121050085A170 /* FavoritesTableViewCell.swift */,
 				4E4F3808267D031C0037C9FA /* ViewController.swift */,
 				4E4F3827267D35000037C9FA /* LibViewController.swift */,
+				F4B299CB268124C20085A170 /* FavoriteViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -172,6 +184,7 @@
 				4E321BEB268107EE00A24EAB /* FavoritesTab.storyboard in Resources */,
 				4E321BE7268106E900A24EAB /* LibraryTab.storyboard in Resources */,
 				4E4F3811267D031D0037C9FA /* LaunchScreen.storyboard in Resources */,
+				F4B299BD268109640085A170 /* data.json in Resources */,
 				4E4F380E267D031D0037C9FA /* Assets.xcassets in Resources */,
 				4E321BE92681071D00A24EAB /* DiscoverTab.storyboard in Resources */,
 				4E4F381D267D07030037C9FA /* Main.storyboard in Resources */,
@@ -190,7 +203,10 @@
 				4E4F3809267D031C0037C9FA /* ViewController.swift in Sources */,
 				4E4F3805267D031C0037C9FA /* AppDelegate.swift in Sources */,
 				4E321BE5268102EC00A24EAB /* LibTableViewCell.swift in Sources */,
+				F4B299CC268124C20085A170 /* FavoriteViewController.swift in Sources */,
 				4E4F3807267D031C0037C9FA /* SceneDelegate.swift in Sources */,
+				F4B299C4268121050085A170 /* FavoritesTableViewCell.swift in Sources */,
+				F4B299C02681096E0085A170 /* MusicService.swift in Sources */,
 				4E4F381B267D06020037C9FA /* MusicService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 478594C4R9;
 				INFOPLIST_FILE = NotSpotify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 478594C4R9;
 				INFOPLIST_FILE = NotSpotify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
