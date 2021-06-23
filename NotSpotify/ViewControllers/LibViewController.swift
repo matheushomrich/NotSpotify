@@ -11,6 +11,7 @@ class LibViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     @IBOutlet weak var lib: UITableView!
     
+    
     private var collections: [MusicCollection] = []
     private var musicService: MusicService?
     
@@ -24,6 +25,7 @@ class LibViewController: UIViewController, UITableViewDataSource, UITableViewDel
             print(error)
         }
         
+        lib.delegate = self
         lib.dataSource = self
     }
     
@@ -41,6 +43,20 @@ class LibViewController: UIViewController, UITableViewDataSource, UITableViewDel
         cell.subtitleLabel.text = "\(musicCollection.type.rawValue) · \(musicCollection.mainPerson)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let musicCollection = collections[indexPath.row]
+        performSegue(withIdentifier: "toDetails", sender: musicCollection)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetails" {
+            let mc = sender as? MusicCollection
+            let vc = segue.destination as? AlbumViewController
+            vc?.musicCollection = mc
+            vc?.musicService = musicService
+        }
     }
     
 }
