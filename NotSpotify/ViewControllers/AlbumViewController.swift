@@ -53,15 +53,25 @@ class AlbumViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.musicImage.image = UIImage(named: musicCollection!.id)
         cell.musicName.text = music?.title
         cell.musicSubtitle.text = music?.artist
+        cell.heartButton.setImage(UIImage(systemName: isFavorited(music: music!) ? "heart.fill" : "heart"), for: .normal)
         
+        if isFavorited(music: music!) {
+            cell.heartButton.tintColor = .red
+        } else {
+            cell.heartButton.tintColor = .black
+        }
+        cell.music = music
+        cell.musicService = musicService
         return cell
     }
     
-    @IBAction func heartButton(_ sender: Any) {
-        
-//        musicService?.toggleFavorite(music: , isFavorite: false)
-//        heartButton.imageView?.image = UIImage(systemName: "heart.fill")
-//        heartButton.imageView?.tintColor = .red
+    func isFavorited(music: Music) -> Bool {
+        for m in musicService!.favoriteMusics {
+            if m == music {
+                return true
+            }
+        }
+        return false
     }
     
     @IBAction func infoButtonAction(_ sender: Any) {

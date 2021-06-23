@@ -55,6 +55,7 @@ class LibViewController: UIViewController, UITableViewDataSource, UITableViewDel
             let mc = sender as? MusicCollection
             let vc = segue.destination as? AlbumViewController
             vc?.musicCollection = mc
+            vc?.musicService = musicService
         }
     }
     
