@@ -20,6 +20,7 @@
 		4E4F381B267D06020037C9FA /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F381A267D06020037C9FA /* MusicService.swift */; };
 		4E4F381D267D07030037C9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4F381C267D07030037C9FA /* Main.storyboard */; };
 		4E4F3828267D35000037C9FA /* LibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F3827267D35000037C9FA /* LibViewController.swift */; };
+		F4B299D026826DB80085A170 /* Playing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B299CF26826DB80085A170 /* Playing.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		4E4F381A267D06020037C9FA /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicService.swift; path = ../MusicService.swift; sourceTree = "<group>"; };
 		4E4F381C267D07030037C9FA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4E4F3827267D35000037C9FA /* LibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibViewController.swift; sourceTree = "<group>"; };
+		F4B299CF26826DB80085A170 /* Playing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Playing.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				4E321BE82681071D00A24EAB /* DiscoverTab.storyboard */,
 				4E321BE6268106E900A24EAB /* LibraryTab.storyboard */,
 				4E4F380F267D031D0037C9FA /* LaunchScreen.storyboard */,
+				F4B299CF26826DB80085A170 /* Playing.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				4E4F3811267D031D0037C9FA /* LaunchScreen.storyboard in Resources */,
 				4E4F380E267D031D0037C9FA /* Assets.xcassets in Resources */,
 				4E321BE92681071D00A24EAB /* DiscoverTab.storyboard in Resources */,
+				F4B299D026826DB80085A170 /* Playing.storyboard in Resources */,
 				4E4F381D267D07030037C9FA /* Main.storyboard in Resources */,
 				4E4F3819267D05F70037C9FA /* data.json in Resources */,
 			);
